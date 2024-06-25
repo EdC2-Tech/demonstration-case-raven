@@ -1,5 +1,9 @@
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.email
 import anvil.server
+from datetime import datetime
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -13,16 +17,4 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 #
-def send_feedback(name, email, feedback):
-  # Send yourself an email each time feedback is submitted
-  anvil.email.send(to=edward.chen@inl.gov, # Change this to your email address!
-                   subject=f"Feedback from {name}",
-                   text=f"""
-                   
-  A new person has filled out the feedback form!
-
-  Name: {name}
-  Email address: {email}
-  Feedback:
-  {feedback}
-  """)
+@anvil.server.callable
