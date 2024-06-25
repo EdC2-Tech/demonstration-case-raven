@@ -7,8 +7,51 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AUQGUO,RNTZZW'}
+    components:
+    - name: label_1
+      properties: {text: Email notification, font_size: 28, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'GEKYCL,LYXSRF'}
+    - name: label_2
+      properties: {text: 'Name:'}
+      type: Label
+      layout_properties: {grid_position: 'BWCKFI,BTGDJQ'}
+    - name: Name_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'BWCKFI,OTLISK'}
+    - name: label_3
+      properties: {text: 'Email:'}
+      type: Label
+      layout_properties: {grid_position: 'ERJAAO,JEFJBL'}
+    - name: Email_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'ERJAAO,NKAQWV'}
+    - name: label_4
+      properties: {text: 'Feedback:'}
+      type: Label
+      layout_properties: {grid_position: 'EAYINI,ARWKPL'}
+    - name: Feedback_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'NTZOGF,EPGMNY'}
+      event_bindings: {pressed_enter: feedback_box_pressed_enter}
+  - name: Submit_button
+    properties: {text: Submit}
+    type: Button
+    layout_properties: {grid_position: 'SVZHKI,NDJEZN'}
+    event_bindings: {click: Submit_button_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
