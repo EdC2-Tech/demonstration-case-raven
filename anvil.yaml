@@ -1,7 +1,7 @@
 allow_embedding: false
 package_name: Demonstration_Case_RAVEN
 name: Demonstration Case RAVEN
-startup_form: Form1
+startup_form: null
 renamed: true
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox, server_spec: null}
 dependencies: []
@@ -30,3 +30,4 @@ db_schema:
       admin_ui: {width: 200, order: 3}
       type: datetime
     title: feedback
+startup: {type: form, module: Main}

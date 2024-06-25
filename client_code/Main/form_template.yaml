@@ -17,11 +17,13 @@ components:
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   components:
-  - name: button_1
+  - name: link1
     properties: {text: Upload File, background: 'theme:On Primary'}
     type: Button
     layout_properties: {grid_position: 'RUTJRX,QLVGHB'}
-  - name: button_2
+    event_bindings: {click: link1_click}
+  - name: link2
     properties: {text: View Data, background: 'theme:On Primary'}
     type: Button
     layout_properties: {grid_position: 'GEXPEV,KAJQGQ'}
+    event_bindings: {click: link2_click}
