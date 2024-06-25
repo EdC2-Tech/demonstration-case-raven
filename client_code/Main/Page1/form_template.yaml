@@ -24,6 +24,10 @@ components:
     properties: {}
     type: FileLoader
     layout_properties: {grid_position: 'JPHBIJ,XVWDDV'}
+  - name: date_picker_1
+    properties: {}
+    type: DatePicker
+    layout_properties: {grid_position: 'FMFVHO,EBYUMV'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
