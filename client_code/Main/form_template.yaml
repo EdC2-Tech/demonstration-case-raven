@@ -3,35 +3,6 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: label_2
-    properties: {text: Home, align: center, font: '30', font_size: 30}
-    type: Label
-    layout_properties: {grid_position: 'GOOITF,MINGNY'}
-    data_bindings:
-    - {property: font, code: '', writeback: false}
-  - name: outlined_card_1
-    properties: {role: outlined-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'BDUZRB,ZXZBZO'}
-    components:
-    - name: label_3
-      properties: {text: Description}
-      type: Label
-      layout_properties: {grid_position: 'SFDBTM,RWSTQE'}
-  - name: outlined_card_2
-    properties: {role: outlined-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'FHODIR,MGAHJM'}
-    components:
-    - name: label_4
-      properties: {text: 'Help '}
-      type: Label
-      layout_properties: {grid_position: 'KMQOSP,OOLGNX'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

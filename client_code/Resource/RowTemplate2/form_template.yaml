@@ -9,3 +9,11 @@ components:
   properties: {text: '', icon: 'fa:minus-square', visible: true, icon_align: right, align: left, enabled: true}
   type: Button
   layout_properties: {column: QYSIRR}
+- name: link_1
+  properties: {}
+  type: Link
+  layout_properties: {column: GECWBB}
+- name: link_2
+  properties: {}
+  type: Link
+  layout_properties: {column: VJQQOR}

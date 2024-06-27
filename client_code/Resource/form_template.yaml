@@ -22,7 +22,7 @@ components:
     type: DataGrid
     components:
     - name: repeating_panel_1
-      properties: {item_template: Main.Resource.RowTemplate2, visible: true}
+      properties: {item_template: Resource.RowTemplate2, visible: true}
       type: RepeatingPanel
       layout_properties: {}
     layout_properties: {grid_position: 'SKLABW,JHKUES'}
