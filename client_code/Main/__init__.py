@@ -12,9 +12,24 @@ class Main(MainTemplate):
     
     # Any code you write here will run before the form opens.
 
-  def link2_click(self, **event_args):
+  def home_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.refresh_data_bindings()
+
+  def viewSch_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Main.ViewData')
+
+  def resource_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Main.Resource')
+
+  def dependency_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Main.Dependency')
+
+
+    
 
   
 
