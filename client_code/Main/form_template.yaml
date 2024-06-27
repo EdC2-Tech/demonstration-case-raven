@@ -36,3 +36,7 @@ components:
   properties: {text: Schedule Optimization Tool - Idaho National Laboratory}
   type: Label
   layout_properties: {slot: title}
+- name: content_panel
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: default}
