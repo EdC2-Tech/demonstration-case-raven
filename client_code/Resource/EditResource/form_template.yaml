@@ -1,0 +1,82 @@
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'PWODJU,OWWAGK'}
+  components:
+  - name: text_box_3
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'KJCSQP,VPUXXK'}
+  - name: spacer_2
+    properties: {height: -11}
+    type: Spacer
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC EGIHFW,PPJFJE'}
+  - name: label_2
+    properties: {text: 'Start Date: ', align: right}
+    type: Label
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC KHUHQA,QTOLOE'}
+  - name: spacer_1
+    properties: {height: -59}
+    type: Spacer
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC BCMQGX,VLKUFF'}
+  - name: label_1
+    properties: {text: 'End Date: ', align: right}
+    type: Label
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC LCSZTV,MNHXOI'}
+  - name: spacer_3
+    properties: {height: 3}
+    type: Spacer
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC AEIEDG,YDVHMT'}
+  - name: label_3
+    properties: {align: right, text: Upstream Dependencies}
+    type: Label
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC LCTTGW,DMWYSI'}
+  - name: spacer_4
+    properties: {height: -42}
+    type: Spacer
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC QBCVVD,MPMNOK'}
+  - name: label_4
+    properties: {align: right, text: Downstream Dependencies}
+    type: Label
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC UODDJL,YKYDQA'}
+  - name: spacer_5
+    properties: {height: -41}
+    type: Spacer
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC LKDDUI,SBSNEX'}
+  - name: label_5
+    properties: {text: Resources, align: right}
+    type: Label
+    layout_properties: {grid_position: 'ZWNJOQ,OSYCIC AJTBFU,RJCZPL'}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'ZWNJOQ,PQVSHM QDEYMX,ACGEQB'}
+    data_bindings:
+    - {property: placeholder, code: '', writeback: false}
+    - {property: text, code: 'self.item[''cell1'']', writeback: true}
+  - name: text_box_2
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'ZWNJOQ,PQVSHM NVZYWR,ICBOJL'}
+  - name: drop_down_1
+    properties: {}
+    type: DropDown
+    layout_properties: {grid_position: 'ZWNJOQ,PQVSHM CVHLFO,TTZRWX'}
+  - name: drop_down_2
+    properties: {}
+    type: DropDown
+    layout_properties: {grid_position: 'ZWNJOQ,PQVSHM DGWZZC,IZDUST'}
+  - name: drop_down_3
+    properties: {}
+    type: DropDown
+    layout_properties: {grid_position: 'ZWNJOQ,PQVSHM XJGCOS,ZYUMRB'}
+  - name: text_box_4
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'UISRCY,BHLTGU'}
+    data_bindings:
+    - {property: placeholder, code: '', writeback: false}
+    - {property: text, code: 'self.item[''cell2'']', writeback: true}
+is_package: true

@@ -15,13 +15,13 @@ class Main(MainTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.clear()
+    self.content_panel.clear()
     self.content_panel.add_component(Home())
     # Any code you write here will run before the form opens.
 
   def home_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.clear()
+    self.content_panel.clear()
     self.content_panel.add_component(Home())
 
   def viewSch_button_click(self, **event_args):

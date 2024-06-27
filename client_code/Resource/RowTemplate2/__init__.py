@@ -5,13 +5,24 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+from ..EditResource import EditResource
 
 class RowTemplate2(RowTemplate2Template):
   def __init__(self, **properties):
+    
+    self.item = {
+      'cell1' : 'one',
+      'cell2' : 'two'
+    }
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.deleteRow_button.width = 20
-    self.addRow_button.width = 20
-
     # Any code you write here will run before the form opens.
+
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    editing_form = EditResource(item=self.item)
+    alert(content=editing_form, large=True)
+
+
+    

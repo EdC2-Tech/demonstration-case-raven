@@ -10,7 +10,11 @@ class Resource(ResourceTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-      
+
+    self.item = {
+      'cell1' : 'one',
+      'cell2' : 'two'
+    }
     self.repeating_panel_1.items = app_tables.resource.search()
     # Any code you write here will run before the form opens.
 
