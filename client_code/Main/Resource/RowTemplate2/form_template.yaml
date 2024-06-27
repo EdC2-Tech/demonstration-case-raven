@@ -2,10 +2,10 @@ is_package: true
 container: {type: DataRowPanel}
 components:
 - name: addRow_button
-  properties: {text: '', icon: 'fa:plus-square'}
+  properties: {text: '', icon: 'fa:plus-square', align: left}
   type: Button
   layout_properties: {column: JPKHMZ}
 - name: deleteRow_button
-  properties: {text: '', icon: 'fa:minus-square', visible: true, icon_align: right, align: left}
+  properties: {text: '', icon: 'fa:minus-square', visible: true, icon_align: right, align: left, enabled: true}
   type: Button
   layout_properties: {column: QYSIRR}

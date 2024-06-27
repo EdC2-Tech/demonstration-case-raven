@@ -15,8 +15,8 @@ components:
   - name: resource_dataGrid
     properties:
       columns:
-      - {id: JPKHMZ, data_key: column_1, title: '', width: 89, expand: false}
-      - {id: QYSIRR, data_key: column_1, title: '', width: 93, expand: false}
+      - {id: JPKHMZ, data_key: column_1, title: '', expand: false, width: 78}
+      - {id: QYSIRR, data_key: column_1, title: '', width: 78, expand: false}
       - {id: GECWBB, data_key: resource_value, title: Resources}
       - {id: VJQQOR, title: Description, data_key: resource_description}
     type: DataGrid
