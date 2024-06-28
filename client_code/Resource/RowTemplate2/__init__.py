@@ -23,6 +23,7 @@ class RowTemplate2(RowTemplate2Template):
     """This method is called when the link is clicked"""
     editing_form = EditResource(item=self.item)
     alert(content=editing_form, large=True)
+    self.refresh_data_bindings()
 
 
     
