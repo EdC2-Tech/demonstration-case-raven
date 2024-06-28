@@ -14,9 +14,76 @@ components:
     layout_properties: {grid_position: 'WDGXOQ,IWEBPM'}
     components:
     - name: label_2
-      properties: {text: Nothing here yet}
+      properties: {text: Dependencies, align: center, font_size: 25}
       type: Label
       layout_properties: {grid_position: 'CANXDD,EDYANT'}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: Dependency Name, data_key: dependency_value, width: 207, expand: false}
+      - {id: VJQQOR, title: Description, data_key: dependency_description}
+      - {id: JPGNPJ, data_key: column_1, title: Column 1, width: 243, expand: false}
+      - {id: FYRUCI, data_key: column_2, title: Column 2, width: 81, expand: false}
+      auto_header: false
+      rows_per_page: 10
+    type: DataGrid
+    components:
+    - name: data_row_panel_1
+      properties: {background: '#0091ff'}
+      type: DataRowPanel
+      layout_properties: {pinned: true}
+      components:
+      - name: label_3
+        properties: {text: Dependency Name, font_size: 20, foreground: 'theme:On Primary'}
+        type: Label
+        layout_properties: {column: JKSDUP}
+      - name: label_4
+        properties: {text: Description, foreground: 'theme:On Primary', font_size: 20}
+        type: Label
+        layout_properties: {column: VJQQOR}
+      - name: label_6
+        properties: {text: Resource, foreground: 'theme:On Primary', font_size: 20}
+        type: Label
+        layout_properties: {column: JPGNPJ}
+    - name: data_row_panel_2
+      properties: {}
+      type: DataRowPanel
+      components:
+      - name: text_box_2
+        properties: {text: Name, foreground: '#b0b0b0'}
+        type: TextBox
+        layout_properties: {column: JKSDUP}
+      - name: text_box_3
+        properties: {foreground: '#b0b0b0', text: Description}
+        type: TextBox
+        layout_properties: {column: VJQQOR}
+      - name: drop_down_1
+        properties: {}
+        type: DropDown
+        layout_properties: {column: JPGNPJ}
+      - name: button_1
+        properties: {text: '', icon: 'fa:plus-square', font_size: 17}
+        type: Button
+        layout_properties: {column: FYRUCI}
+        event_bindings: {click: button_1_click}
+    - name: repeating_panel_1
+      properties: {item_template: Dependency.RowTemplate4}
+      type: RepeatingPanel
+    - name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: footer}
+      components:
+      - name: label_5
+        properties: {text: 'Page Size:'}
+        type: Label
+        layout_properties: {}
+      - name: text_box_1
+        properties: {spacing_above: none, text: '10'}
+        type: TextBox
+        layout_properties: {width: 56}
+        event_bindings: {lost_focus: text_box_1_lost_focus}
+    layout_properties: {grid_position: 'OLNOWC,LOOHLL'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

@@ -18,5 +18,27 @@ from datetime import datetime
 #   return 42
 #
 @anvil.server.callable
-def get_resources():
+def delete_resource(resource):
+  resource.delete()
+
+@anvil.server.callable
+def get_resource():
+  return app_tables.resource.search()
   
+@anvil.server.callable
+def get_dependency():
+  return app_tables.dependency.search()
+
+@anvil.server.callable
+def add_dependency(dependency_value, dependency_description, resource):
+  app_tables.dependency.add_row(dependency_value=dependency_value,
+                                dependency_description=dependency_description,
+                                resource=resource
+                               )
+  
+@anvil.server.callable
+def edit_dependency(dependency_value, dependency_description, resource):
+  app_tables.dependency.update(dependency_value=dependency_value,
+                               dependency_description=dependency_description,
+                               resource=resource
+                               )

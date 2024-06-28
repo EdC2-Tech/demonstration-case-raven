@@ -19,11 +19,18 @@ class RowTemplate2(RowTemplate2Template):
 
     # Any code you write here will run before the form opens.
 
-  def link_3_click(self, **event_args):
+  def edit_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     editing_form = EditResource(item=self.item)
     alert(content=editing_form, large=True)
     self.refresh_data_bindings()
+
+  def delete_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    delName = self.resource_value
+    
+    self.remove_from_parent()
+    
 
 
     

@@ -39,5 +39,12 @@ db_schema:
     - name: dependency_value
       admin_ui: {width: 200, order: 0}
       type: string
+    - name: dependency_description
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: resource
+      admin_ui: {order: 3, width: 200}
+      type: link_multiple
+      target: resource
     title: dependency
 startup: {type: form, module: Main}
