@@ -15,8 +15,6 @@ class Dependency(DependencyTemplate):
     dependency = anvil.server.call('get_dependency')
     self.repeating_panel_1.items = dependency
     
-    # Populate dropdown 
-    
     # Any code you write here will run before the form opens.
 
   def text_box_1_lost_focus(self, **event_args):

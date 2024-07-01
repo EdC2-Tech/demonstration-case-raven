@@ -12,7 +12,8 @@ unique_ids:
     Dependency.RowTemplate4: '1719600982996385715772643.4928'
     Dependency.ItemTemplate1: '1719600875421770068468947.7186'
     Home: '1719518101932758621814418.7811'
-  modules: {}
+  modules:
+    Dependency.GetResource: '1719844891041404533485259.0046'
   server_modules:
     ServerModule1: '1719338525409865316847659.6964'
   assets:

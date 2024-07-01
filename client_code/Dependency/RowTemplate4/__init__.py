@@ -5,16 +5,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+from ..GetResource import  resources as RES
+
 class RowTemplate4(RowTemplate4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
-    item_list = []
-    for row in app_tables.resource.search():
-      item_list.append((row["resource_value"]))
       
-    self.drop_down_1.items = item_list
+    self.drop_down_1.items = RES
     # Any code you write here will run before the form opens.
 
   def edit_dependency(self):
