@@ -27,7 +27,7 @@ class RowTemplate2(RowTemplate2Template):
 
   def delete_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    delName = self.resource_value
+    #delName = self.item
     
     self.remove_from_parent()
     

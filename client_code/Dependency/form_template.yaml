@@ -50,11 +50,11 @@ components:
       type: DataRowPanel
       components:
       - name: text_box_2
-        properties: {text: Name, foreground: '#b0b0b0'}
+        properties: {text: '', foreground: ''}
         type: TextBox
         layout_properties: {column: JKSDUP}
       - name: text_box_3
-        properties: {foreground: '#b0b0b0', text: Description}
+        properties: {foreground: '', text: ''}
         type: TextBox
         layout_properties: {column: VJQQOR}
       - name: drop_down_1
