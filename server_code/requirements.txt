@@ -1,1 +1,1 @@
-git+https://github.com/idaholab/raven.git@master
+git+https://github.com/idaholab/LOGOS@devel
