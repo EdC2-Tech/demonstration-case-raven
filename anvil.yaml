@@ -52,3 +52,4 @@ db_schema:
       target: resource
     title: dependency
 startup: {type: form, module: Main}
+uplink_visible: true
