@@ -18,3 +18,8 @@ class UplinkTest(UplinkTestTemplate):
     param = self.text_box_1.text
     name = anvil.server.call('print_test', param)
     self.text_box_2.text = name
+
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    ret = anvil.server.call('run_raven')
+    self.text_area_1.text = ret

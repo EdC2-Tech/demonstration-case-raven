@@ -14,6 +14,10 @@ class Dependency(DependencyTemplate):
     # Populate grid panel
     dependency = anvil.server.call('get_dependency')
     self.repeating_panel_1.items = dependency
+
+    # Populate drop down panel
+    panel = anvil.server.call('get_resource')
+    self.drop_down_1.items = panel
     
     # Any code you write here will run before the form opens.
 

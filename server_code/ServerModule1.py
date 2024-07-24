@@ -23,7 +23,7 @@ def delete_resource(resource):
 
 @anvil.server.callable
 def get_resource():
-  return app_tables.resource.search()
+  return [(row["resource_value"]) for row in app_tables.resource.search()]
   
 @anvil.server.callable
 def get_dependency():
