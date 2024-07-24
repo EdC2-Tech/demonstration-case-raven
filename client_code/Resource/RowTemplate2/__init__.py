@@ -9,11 +9,6 @@ from ..EditResource import EditResource
 
 class RowTemplate2(RowTemplate2Template):
   def __init__(self, **properties):
-    
-    self.item = {
-      'cell1' : 'one',
-      'cell2' : 'two'
-    }
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -27,8 +22,7 @@ class RowTemplate2(RowTemplate2Template):
 
   def delete_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    #delName = self.item
-    
+    anvil.server.call('delete_resource', self.item)    
     self.remove_from_parent()
     
 

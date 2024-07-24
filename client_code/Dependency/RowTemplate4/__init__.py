@@ -16,20 +16,20 @@ class RowTemplate4(RowTemplate4Template):
   def edit_dependency(self):
     dependency_value = self.text_box_1.text
     dependency_description = self.text_box_2.text
-    resource = self.drop_down_1.selected_value
+    #resource = self.drop_down_1.selected_value
     
-    anvil.server.call('edit_dependency',
-                      dependency_value = dependency_value,
-                      dependency_description = dependency_description,
-                      resource = resource)
+    anvil.server.call('edit_dependency', 
+                      dependency_value = dependency_value)
     
   def text_box_1_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     self.edit_dependency()
+    self.refresh_data_bindings()
 
   def text_box_2_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     self.edit_dependency()
+    self.refresh_data_bindings()
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""

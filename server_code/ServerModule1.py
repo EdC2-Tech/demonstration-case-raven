@@ -37,8 +37,6 @@ def add_dependency(dependency_value, dependency_description, resource):
                                )
   
 @anvil.server.callable
-def edit_dependency(dependency_value, dependency_description, resource):
-  app_tables.dependency.update(dependency_value=dependency_value,
-                               dependency_description=dependency_description,
-                               resource=resource
-                               )
+def edit_dependency(dependency_value):
+  app_tables.dependency.update(dependency_value=dependency_value)
+  

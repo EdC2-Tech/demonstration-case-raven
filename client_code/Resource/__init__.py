@@ -14,11 +14,10 @@ class Resource(ResourceTemplate):
     
     self.__update_table__()
     # Any code you write here will run before the form opens.
-
-    self.drop_down_1.items = anvil.server.call("get_resource")
     
   def __update_table__(self):
     self.repeating_panel_1.items = app_tables.resource.search()
+    self.drop_down_1.items = anvil.server.call("get_resource")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
