@@ -23,7 +23,7 @@ class Dependency(DependencyTemplate):
 
   def text_box_1_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
-    rowPerPage = int(self.text_box_1.text) + 1
+    rowPerPage = int(self.text_box_1.text) + 2
     if rowPerPage > 50:
       rowPerPage = 50
       
