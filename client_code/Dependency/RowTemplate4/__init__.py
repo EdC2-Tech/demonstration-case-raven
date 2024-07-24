@@ -31,13 +31,15 @@ class RowTemplate4(RowTemplate4Template):
     """This method is called when the TextBox loses focus"""
     self.edit_dependency()
 
+  def text_box_3_lost_focus(self, **event_args):
+    """This method is called when the TextBox loses focus"""
+    self.edit_dependency()
+    
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
     self.edit_dependency()
 
-  def text_box_2_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
+
 
   
 

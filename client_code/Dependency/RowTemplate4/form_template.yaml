@@ -15,10 +15,8 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''dependency_description'']', writeback: false}
   event_bindings: {lost_focus: text_box_2_lost_focus, pressed_enter: text_box_2_pressed_enter}
-- name: drop_down_1
+- name: text_box_3
   properties: {}
-  type: DropDown
+  type: TextBox
   layout_properties: {column: JPGNPJ}
-  event_bindings: {change: drop_down_1_change}
-  data_bindings:
-  - {property: selected_value, code: 'self.item[''resource'']', writeback: false}
+  event_bindings: {lost_focus: text_box_3_lost_focus}
