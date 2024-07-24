@@ -5,8 +5,6 @@ import anvil.email
 import anvil.server
 from datetime import datetime
 
-import ravenframework
-
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #

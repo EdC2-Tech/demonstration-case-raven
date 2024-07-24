@@ -9,6 +9,7 @@ from ..Home import Home
 from ..ViewData import ViewData
 from ..Dependency import Dependency
 from ..Resource import Resource
+from ..UplinkTest import UplinkTest
 
 class Main(MainTemplate):
   def __init__(self, **properties):
@@ -38,6 +39,13 @@ class Main(MainTemplate):
     """This method is called when the button is clicked"""
     self.content_panel.clear()
     self.content_panel.add_component(Dependency())
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(UplinkTest())
+
+  
 
 
     
