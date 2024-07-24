@@ -12,16 +12,15 @@ class Dependency(DependencyTemplate):
     self.init_components(**properties)
 
     # Populate grid panel
-    dependency = anvil.server.call('get_dependency')
-    self.repeating_panel_1.items = dependency
+    self.repeating_panel_1.items = anvil.server.call('get_dependency')
 
     # Populate drop down panel
     panel = anvil.server.call('get_resource')
-    self.drop_down_1.items = panel
+    self.edit_res_dropdown.items = {(row["resource_value"]) for row in panel}
     
     # Any code you write here will run before the form opens.
 
-  def text_box_1_lost_focus(self, **event_args):
+  def pg_size_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     rowPerPage = int(self.text_box_1.text) + 2
     if rowPerPage > 50:
@@ -31,19 +30,20 @@ class Dependency(DependencyTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    dependency_value = self.text_box_2.text
-    dependency_description = self.text_box_3.text
-    resource = self.drop_down_1.selected_value
+    dependency_value = self.edit_dep_val.text
+    dependency_description = self.edit_dep_des.text
+    resource = self.edit_res_dropdown.selected_value
     
     anvil.server.call('add_dependency',
                       dependency_value = dependency_value,
                       dependency_description = dependency_description,
                       resource = resource
                      )
-    # Refresh the data in table
-    anvil.server.call("get_dependency")
+    # refresh grid panel
+    dependency = anvil.server.call('get_dependency')
+    self.repeating_panel_1.items = dependency
     
     # clear after adding new row
-    self.text_box_1.text = ''
-    self.text_box_2.text = ''
-    self.drop_down_1.selected_value = self.drop_down_1.items[0]
+    self.edit_dep_val.text = ''
+    self.edit_dep_des.text = ''
+    self.edit_res_dropdown.selected_value = self.edit_res_dropdown.items[0]

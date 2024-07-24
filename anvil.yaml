@@ -18,38 +18,46 @@ services:
   server_config: {test_mode: false, custom_smtp: false}
 db_schema:
   increment:
+    title: increment
     client: search
     server: full
     columns:
     - name: increment_value
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
-    title: increment
   resource:
+    title: resource
     client: full
     server: full
     columns:
     - name: resource_value
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
     - name: resource_description
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: string
-    title: resource
   dependency:
+    title: dependency
     client: full
     server: full
     columns:
     - name: dependency_value
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
     - name: dependency_description
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: string
     - name: resource
-      admin_ui: {order: 3, width: 200}
-      type: link_multiple
+      admin_ui: {width: 200}
+      type: string
+    - name: res_list
+      admin_ui: {width: 200, order: 3}
+      type: link_single
       target: resource
-    title: dependency
+  table_4:
+    client: none
+    server: full
+    columns: []
+    title: Table 4
 startup: {type: form, module: Main}
 uplink_visible: true

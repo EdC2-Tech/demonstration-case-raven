@@ -5,29 +5,33 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+from ..ResourceState import resources_available
+
 class RowTemplate4(RowTemplate4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-      
-    self.drop_down_1.items = anvil.server.call("get_resource")
+
     # Any code you write here will run before the form opens.
+    self.res_dropdown.items = resources_available 
+
 
   def edit_dependency(self):
-    dependency_value = self.text_box_1.text
-    dependency_description = self.text_box_2.text
-    resource = self.drop_down_1.selected_value
+    dependency_value       = self.dep_val.text
+    dependency_description = self.dep_des.text
+    res                    = self.res_dropdown.selected_value
     
     anvil.server.call('edit_dependency',
+                      self.item,
                       dependency_value = dependency_value,
                       dependency_description = dependency_description,
-                      resource = resource)
+                      resource = res)
     
-  def text_box_1_lost_focus(self, **event_args):
+  def dep_val_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     self.edit_dependency()
 
-  def text_box_2_lost_focus(self, **event_args):
+  def dep_des_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     self.edit_dependency()
 
