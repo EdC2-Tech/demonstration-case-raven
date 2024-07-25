@@ -7,12 +7,7 @@ components:
   properties: {}
   type: DataRowPanel
   layout_properties: {column: 'null'}
-  components:
-  - name: button_3
-    properties: {text: '', icon: 'fa:edit', font_size: 18}
-    type: Button
-    layout_properties: {column: FYRUCI}
-    event_bindings: {click: button_3_click}
+  components: []
   data_bindings:
   - {property: item, code: self.item, writeback: false}
 - name: data_row_panel_2
@@ -38,13 +33,15 @@ components:
     layout_properties: {column: JPGNPJ}
     data_bindings:
     - {property: selected_value, code: 'self.item[''resource'']', writeback: false}
-  - name: button_1
-    properties: {text: '', icon: 'fa:save', font_size: 18}
-    type: Button
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
     layout_properties: {column: FYRUCI}
-    event_bindings: {click: button_1_click}
-  - name: button_2
-    properties: {text: '', icon: 'fa:trash-o', font_size: 18}
-    type: Button
-    layout_properties: {column: OYQBVS}
-    event_bindings: {click: button_2_click}
+    components:
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+    - name: button_2
+      properties: {text: '', icon: 'fa:trash-o', font_size: 18}
+      type: Button
+      event_bindings: {click: button_2_click}
