@@ -10,7 +10,7 @@ class Gantt_Test(Gantt_TestTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.plot_1.figure = anvil.server.call('plotly_version1')
+    self.plot_1.figure = anvil.server.call('plotly_test')
     
   # Any code you write here will run before the form opens.
   

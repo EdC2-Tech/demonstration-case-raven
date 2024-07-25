@@ -1,5 +1,5 @@
 allow_embedding: false
-package_name: plotly
+package_name: Demo
 name: Demonstration Case RAVEN
 startup_form: null
 renamed: true

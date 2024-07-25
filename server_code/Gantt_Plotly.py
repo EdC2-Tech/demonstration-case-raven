@@ -19,6 +19,12 @@ import plotly.express as px
 #
 
 @anvil.server.callable
+def plotly_test():
+  data = px.data.iris()
+  fig = px.scatter(data, x="sepal_width", y="sepal_length", color="species", trendline="ols")
+  return fig
+
+@anvil.server.callable
 def plotly_version1():
     start = {"name": "start", "begin": 1, "end": 3}
     a     = {"name": "a", "begin": 3, "end": 4}
@@ -55,6 +61,6 @@ def plotly_version1():
     }
 
     fig = px.timeline(all_L, x_start=begin_L, x_end=end_L, y=activity_L, title="Plotly Gantt Version 1")
-    fig.update_yaxes(autorange='reversed')
+    #fig.update_yaxes(autorange='reversed')
 
     return fig
