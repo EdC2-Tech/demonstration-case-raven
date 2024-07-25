@@ -14,6 +14,8 @@ class Resource(ResourceTemplate):
     
     self.__update_table__()
     # Any code you write here will run before the form opens.
+
+    self.drop_down_1.items = {(row["resource_value"]) for row in anvil.server.call("get_resource")}
     
   def __update_table__(self):
     self.repeating_panel_1.items = app_tables.resource.search()
