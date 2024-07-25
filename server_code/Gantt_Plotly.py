@@ -21,21 +21,21 @@ import plotly.express as px
 @anvil.server.callable
 def plotly_test():
   data = px.data.iris()
-  fig = px.scatter(data, x="sepal_width", y="sepal_length", color="species", trendline="ols")
+  fig = px.scatter(data, x="sepal_width", y="sepal_length", color="species")
   return fig
 
 @anvil.server.callable
 def plotly_version1():
-    start = {"name": "start", "begin": 1, "end": 3}
-    a     = {"name": "a", "begin": 3, "end": 4}
-    b     = {"name": "b", "begin": 3, "end": 5}
-    c     = {"name": "c", "begin": 5, "end": 6}
-    d     = {"name": "d", "begin": 6, "end": 7}
-    e     = {"name": "e", "begin": 7, "end": 8}
-    f     = {"name": "f", "begin": 7, "end": 8}
-    g     = {"name": "g", "begin": 6, "end": 8}
-    h     = {"name": "h", "begin": 8, "end": 9}
-    end   = {"name": "end", "begin": 9, "end": 11}
+    start = {"name": "start", "begin": '2020-7-1', "end": '2020-7-2'}
+    a     = {"name": "a", "begin": '2020-7-1', "end": '2020-7-2'}
+    b     = {"name": "b", "begin": '2020-7-1', "end": '2020-7-2'}
+    c     = {"name": "c", "begin": '2020-7-1', "end": '2020-7-2'}
+    d     = {"name": "d", "begin": '2020-7-1', "end": '2020-7-2'}
+    e     = {"name": "e", "begin": '2020-7-1', "end": '2020-7-2'}
+    f     = {"name": "f", "begin": '2020-7-1', "end": '2020-7-2'}
+    g     = {"name": "g", "begin": '2020-7-1', "end": '2020-7-2'}
+    h     = {"name": "h", "begin": '2020-7-1', "end": '2020-7-2'}
+    end   = {"name": "end", "begin": '2020-7-1', "end": '2020-7-2'}
 
     all_L = (start, a, b, c, d, e, f, g, h, end)
 
@@ -61,6 +61,6 @@ def plotly_version1():
     }
 
     fig = px.timeline(all_L, x_start=begin_L, x_end=end_L, y=activity_L, title="Plotly Gantt Version 1")
-    #fig.update_yaxes(autorange='reversed')
+    fig.update_yaxes(autorange='reversed')
 
     return fig
