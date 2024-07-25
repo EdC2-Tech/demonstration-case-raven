@@ -19,7 +19,7 @@ class Resource(ResourceTemplate):
     
   def __update_table__(self):
     self.repeating_panel_1.items = app_tables.resource.search()
-    self.drop_down_1.items = anvil.server.call("get_resource")
+    self.drop_down_1.items = {(row["resource_value"]) for row in anvil.server.call("get_resource")}
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
