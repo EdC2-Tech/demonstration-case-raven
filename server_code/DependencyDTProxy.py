@@ -12,16 +12,14 @@ def get_dependency():
 def add_dependency(dependency_value, dependency_description, resource):
   app_tables.dependency.add_row(dependency_value=dependency_value,
                                 dependency_description=dependency_description,
-                                resource=resource,
-                                res_list=None
+                                resource=resource
                                )
   
 @anvil.server.callable
 def edit_dependency(table_entry, dependency_value, dependency_description, resource):
   table_entry.update(dependency_value=dependency_value,
                      dependency_description=dependency_description,
-                     resource=resource,
-                     res_list=None
+                     resource=resource
                      )
 
 @anvil.server.callable

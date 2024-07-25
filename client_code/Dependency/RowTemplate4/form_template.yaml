@@ -6,46 +6,45 @@ components:
 - name: data_row_panel_1
   properties: {}
   type: DataRowPanel
-  layout_properties: {}
+  layout_properties: {column: 'null'}
   components:
-  - name: text_box_1
-    properties: {}
-    type: TextBox
-    layout_properties: {column: JKSDUP}
-  - name: text_box_2
-    properties: {}
-    type: TextBox
-    layout_properties: {column: VJQQOR}
-  - name: text_box_3
-    properties: {}
-    type: TextBox
-    layout_properties: {column: JPGNPJ}
   - name: button_3
     properties: {text: '', icon: 'fa:edit', font_size: 18}
     type: Button
     layout_properties: {column: FYRUCI}
+    event_bindings: {click: button_3_click}
+  data_bindings:
+  - {property: item, code: self.item, writeback: false}
 - name: data_row_panel_2
-  properties: {}
+  properties: {visible: false}
   type: DataRowPanel
-  layout_properties: {}
+  layout_properties: {column: 'null'}
   components:
   - name: text_box_4
-    properties: {}
+    properties: {text: ''}
     type: TextBox
     layout_properties: {column: JKSDUP}
+    data_bindings:
+    - {property: text, code: 'self.item[''dependency_value'']', writeback: false}
   - name: text_box_5
     properties: {}
     type: TextBox
     layout_properties: {column: VJQQOR}
+    data_bindings:
+    - {property: text, code: 'self.item[''dependency_description'']', writeback: false}
   - name: drop_down_1
-    properties: {}
+    properties: {align: full}
     type: DropDown
     layout_properties: {column: JPGNPJ}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''resource'']', writeback: false}
   - name: button_1
     properties: {text: '', icon: 'fa:save', font_size: 18}
     type: Button
     layout_properties: {column: FYRUCI}
+    event_bindings: {click: button_1_click}
   - name: button_2
     properties: {text: '', icon: 'fa:trash-o', font_size: 18}
     type: Button
     layout_properties: {column: OYQBVS}
+    event_bindings: {click: button_2_click}

@@ -22,7 +22,7 @@ components:
       columns:
       - {id: JKSDUP, title: Dependency Name, data_key: dependency_value, width: 207, expand: false}
       - {id: VJQQOR, title: Description, data_key: dependency_description}
-      - {id: JPGNPJ, data_key: dependency_resource, title: Column 1, width: 243, expand: false}
+      - {id: JPGNPJ, data_key: resource, title: Column 1, width: 243, expand: false}
       - {id: FYRUCI, data_key: column_2, title: Column 2, expand: false, width: 69}
       - {id: OYQBVS, data_key: column_3, title: Column 3, width: 64, expand: false}
       auto_header: false

@@ -17,9 +17,13 @@ class Dependency(DependencyTemplate):
     # Populate drop down panel
     panel = anvil.server.call('get_resource')
     self.edit_res_dropdown.items = {(row["resource_value"]) for row in panel}
-    
-    # Any code you write here will run before the form opens.
 
+    self.repeating_panel_1.set_event_handler('x-refresh-dependencies', self.refresh_dependencies)
+    # Any code you write here will run before the form opens.
+  
+  def refresh_dependencies(self, **event_args):
+    self.repeating_panel_1.items = anvil.server.call('get_dependency')
+  
   def pg_size_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     rowPerPage = int(self.text_box_1.text) + 2
@@ -40,8 +44,7 @@ class Dependency(DependencyTemplate):
                       resource = resource
                      )
     # refresh grid panel
-    dependency = anvil.server.call('get_dependency')
-    self.repeating_panel_1.items = dependency
+    self.repeating_panel_1.items = anvil.server.call('get_dependency')
     
     # clear after adding new row
     self.edit_dep_val.text = ''

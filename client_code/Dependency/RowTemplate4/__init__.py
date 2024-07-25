@@ -13,35 +13,39 @@ class RowTemplate4(RowTemplate4Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.res_dropdown.items = resources_available 
-
+    self.drop_down_1.items = resources_available 
 
   def edit_dependency(self):
-    dependency_value       = self.dep_val.text
-    dependency_description = self.dep_des.text
-    res                    = self.res_dropdown.selected_value
+    dependency_value       = self.text_box_4.text
+    dependency_description = self.text_box_5.text
+    res                    = self.drop_down_1.selected_value
     
     anvil.server.call('edit_dependency',
                       self.item,
                       dependency_value = dependency_value,
                       dependency_description = dependency_description,
                       resource = res)
-    
-  def dep_val_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.edit_dependency()
 
-  def dep_des_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.edit_dependency()
+  def button_3_click(self, **event_args):
+    """This method is called when the edit button is clicked"""
+    self.data_row_panel_1.visible=False
+    self.data_row_panel_2.visible=True
 
-  def text_box_3_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
+  def button_1_click(self, **event_args):
+    """This method is called when the save button is clicked"""
+    self.data_row_panel_1.visible=True
+    self.data_row_panel_2.visible=False
+
     self.edit_dependency()
+    self.refresh_data_bindings()
+
+  def button_2_click(self, **event_args):
+    """This method is called when the delete button is clicked"""
+    anvil.server.call('delete_dependency', self.item)
+    self.parent.raise_event('x-refresh-dependencies')
     
-  def drop_down_1_change(self, **event_args):
-    """This method is called when an item is selected"""
-    self.edit_dependency()
+
+  
 
 
 
