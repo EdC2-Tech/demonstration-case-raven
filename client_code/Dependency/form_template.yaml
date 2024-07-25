@@ -19,15 +19,15 @@ components:
       name: label_2
   - properties:
       columns:
-      - {id: JKSDUP, title: Dependency Name, data_key: dependency_value, width: 224, expand: false}
-      - {id: VJQQOR, title: Description, data_key: dependency_description, width: 220, expand: false}
-      - {id: JPGNPJ, data_key: res_list, title: Column 1, width: 169, expand: false}
-      - {id: FYRUCI, data_key: column_2, title: Column 2, expand: false, width: 60}
-      - {id: OYQBVS, data_key: column_3, title: Column 3, width: 70, expand: false}
+      - {id: JKSDUP, title: Dependency Name, data_key: dependency_value, width: 201, expand: false}
+      - {id: VJQQOR, title: Description, data_key: dependency_description, width: 197, expand: false}
+      - {id: JPGNPJ, data_key: resource, title: Column 1, width: 169, expand: false}
+      - {id: FYRUCI, data_key: c1, title: Column 2, expand: false, width: 81}
+      - {id: OYQBVS, data_key: c2, title: Column 3, width: 82, expand: false}
       auto_header: false
       rows_per_page: 10
     type: DataGrid
-    layout_properties: {grid_position: 'OLNOWC,LOOHLL'}
+    layout_properties: {grid_position: 'OLNOWC,LOOHLL', full_width_row: false}
     name: data_grid_1
     components:
     - properties: {background: '#0091ff'}
@@ -63,11 +63,12 @@ components:
         type: DropDown
         layout_properties: {column: JPGNPJ}
         name: edit_res_dropdown
-      - properties: {text: '', icon: 'fa:plus-square', font_size: 17}
+      - properties: {text: '', icon: 'fa:plus-square', font_size: 17, align: left}
         type: Button
         layout_properties: {column: FYRUCI}
         event_bindings: {click: button_1_click}
         name: button_1
+      layout_properties: {pinned: true}
     - properties: {item_template: Dependency.RowTemplate4}
       type: RepeatingPanel
       name: repeating_panel_1
