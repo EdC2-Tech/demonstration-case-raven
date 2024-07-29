@@ -27,15 +27,15 @@ def plotly_test():
 @anvil.server.callable
 def plotly_version1():
     start = {"name": "start", "begin": '2020-7-1', "end": '2020-7-2'}
-    a     = {"name": "a", "begin": '2020-7-2', "end": '2020-7-2'}
-    b     = {"name": "b", "begin": '2020-7-3', "end": '2020-7-2'}
-    c     = {"name": "c", "begin": '2020-7-1', "end": '2020-7-2'}
-    d     = {"name": "d", "begin": '2020-7-1', "end": '2020-7-2'}
-    e     = {"name": "e", "begin": '2020-7-1', "end": '2020-7-2'}
-    f     = {"name": "f", "begin": '2020-7-1', "end": '2020-7-2'}
-    g     = {"name": "g", "begin": '2020-7-1', "end": '2020-7-2'}
-    h     = {"name": "h", "begin": '2020-7-1', "end": '2020-7-2'}
-    end   = {"name": "end", "begin": '2020-7-1', "end": '2020-7-2'}
+    a     = {"name": "a", "begin": '2020-7-2', "end": '2020-7-3'}
+    b     = {"name": "b", "begin": '2020-7-3', "end": '2020-7-4'}
+    c     = {"name": "c", "begin": '2020-7-8', "end": '2020-7-9'}
+    d     = {"name": "d", "begin": '2020-7-2', "end": '2020-7-4'}
+    e     = {"name": "e", "begin": '2020-7-5', "end": '2020-7-8'}
+    f     = {"name": "f", "begin": '2020-7-2', "end": '2020-7-8'}
+    g     = {"name": "g", "begin": '2020-7-9', "end": '2020-7-12'}
+    h     = {"name": "h", "begin": '2020-7-9', "end": '2020-7-12'}
+    end   = {"name": "end", "begin": '2020-7-12', "end": '2020-7-13'}
 
     all_L = (start, a, b, c, d, e, f, g, h, end)
 
