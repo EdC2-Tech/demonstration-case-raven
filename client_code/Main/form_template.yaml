@@ -43,9 +43,10 @@ components:
     layout_properties: {grid_position: 'QRJJUA,XRINME'}
     event_bindings: {click: outlined_button_2_click}
   - name: outlined_button_3
-    properties: {text: 'Gantt GCharts    ', role: outlined-button, background: 'theme:On Primary', align: left}
+    properties: {text: 'Gantt JSCharts  ', role: outlined-button, background: 'theme:On Primary', align: left}
     type: Button
     layout_properties: {grid_position: 'WSJSSE,GHSLJL'}
+    event_bindings: {click: outlined_button_3_click}
 - name: label_1
   properties: {text: Schedule Optimization Tool - Idaho National Laboratory}
   type: Label

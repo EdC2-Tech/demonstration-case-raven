@@ -11,6 +11,7 @@ from ..Dependency import Dependency
 from ..Resource import Resource
 from ..UplinkTest import UplinkTest
 from ..Gantt_Test import Gantt_Test
+from ..Gantt_JS import Gantt_JS
 
 class Main(MainTemplate):
   def __init__(self, **properties):
@@ -50,6 +51,11 @@ class Main(MainTemplate):
     """This method is called when the button is clicked"""
     self.content_panel.clear()
     self.content_panel.add_component(Gantt_Test())
+
+  def outlined_button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(Gantt_JS())
 
   
 

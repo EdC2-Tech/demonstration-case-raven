@@ -61,3 +61,4 @@ db_schema:
     title: Table 4
 startup: {type: form, module: Main}
 uplink_visible: true
+native_deps: {head_html: '<script src="https://www.gstatic.com/charts/loader.js"></script>'}
