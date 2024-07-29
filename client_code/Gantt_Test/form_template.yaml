@@ -4,14 +4,20 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {wrap_on: never}
   name: content_panel
   layout_properties: {slot: default}
   components:
   - name: plot_1
     properties: {}
     type: Plot
-    layout_properties: {grid_position: 'RTPYXY,TLNUPL'}
+    layout_properties: {grid_position: 'RTPYXY,TLNUPL', full_width_row: true}
+    data_bindings: []
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
+    layout_properties: {grid_position: 'ZVIVQD,MTNJNN'}
+    event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
