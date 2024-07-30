@@ -8,10 +8,10 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: image_1
-    properties: {height: 357}
-    type: Image
-    layout_properties: {grid_position: 'QGGBEB,AVTNTY'}
+  - name: plot_1
+    properties: {}
+    type: Plot
+    layout_properties: {grid_position: 'ZTAXIV,QRSYNQ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
