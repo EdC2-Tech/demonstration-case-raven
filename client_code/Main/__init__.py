@@ -27,7 +27,7 @@ class Main(MainTemplate):
     self.content_panel.clear()
     self.content_panel.add_component(Home())
 
-  def viewSch_button_click(self, **event_args):
+  def schedule_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.content_panel.clear()
     self.content_panel.add_component(ViewData())
