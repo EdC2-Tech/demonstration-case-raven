@@ -90,7 +90,7 @@ components:
   properties: {}
   layout_properties: {slot: nav-right}
   name: navbar_links
-- properties: {text: Schedule Optimization Tool - Idaho National Laboratory}
+- properties: {text: ''}
   type: Label
   layout_properties: {slot: title}
   name: label_1

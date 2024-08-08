@@ -1,6 +1,6 @@
 allow_embedding: false
 package_name: Demo
-name: Demonstration Case RAVEN
+name: Demonstration Case
 startup_form: null
 renamed: true
 runtime_options:
